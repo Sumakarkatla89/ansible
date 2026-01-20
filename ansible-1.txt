@@ -37,9 +37,40 @@ if you run a program multiple time,that can create samething multiple
 times even you run your program infinite times,it should not create any
 damage.
 
+pull based configure
+---------------------
+chef server
 
+we will configure agents to check every one hour
 
+24*7=168 times it will connect to server
+bandwidth waste 
+resource consumption like CPU and Memory.
 
+PULL
+------
+1.nodes should connect to the servers through the software.
+2.nodes should downloaad the configuration periodically.say every 30 min.
+3.even there is no change in configuration,agents connect to the servers that creates unnecessary traffic and data.
+  consumption.
+PUSH
+-------
+1.unlike pull there is no need of agent installation.
+2.whenever there is a change in configuration,server can push to the node directly.
+3.ansible uses ssh authentication to connect to the servers.
+
+how to install ansible?
+sudo yum install ansible -y
+
+how to connect to node server using the main server?
+ansible all -i "54.163.222.183," -u centos --extra-vars "ansible_password=DevOps321" -m ping
+
+linux-->everything is called as command but in ansible everything is called as module.
+
+ansible is from RedHat and centos creators
+
+playbook--is a file of modules or collections
+playbook has YAML syntax-->yet markup language.
 
 
 
