@@ -1,0 +1,80 @@
+Ansible
+----------
+shell disadvantages
+
+1.shell script will not work in all linux distros
+2.scalability -->difficult to manage more no of servers
+3.error handling and validaations ,need to manual.
+4.difficult to read and understand.
+5.shell will only work for linux.
+
+ansible is a configuration management tool
+-----------------------------------------------
+configure your laptop
+to make server ready for application deployment is called configuring server
+
+deploymennt
+-----------
+1.stop the server
+2.remove old code
+3.download the new code.
+4.restart
+
+ansible features
+-----------------
+.platform independent
+.scalable
+.idempotence
+.error handling
+.relatable and maintanable.
+.vault
+.rich modules
+.agentless
+
+Idempotence
+-----------
+if you run a program multiple time,that can create samething multiple
+times even you run your program infinite times,it should not create any
+damage.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
