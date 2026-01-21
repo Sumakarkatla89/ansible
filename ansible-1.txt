@@ -72,7 +72,9 @@ ansible is from RedHat and centos creators
 playbook--is a file of modules or collections
 playbook has YAML syntax-->yet markup language.
 
+ansible inventory is the list of host that the ansible server will connecct to.
 
+ansible-playbook -i inventory -e ansible_user=centos -e ansible_password=DevOps321 01-playbook.yaml
 
 
 
