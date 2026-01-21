@@ -1,0 +1,113 @@
+Ansible
+----------
+shell disadvantages
+
+1.shell script will not work in all linux distros
+2.scalability -->difficult to manage more no of servers
+3.error handling and validaations ,need to manual.
+4.difficult to read and understand.
+5.shell will only work for linux.
+
+ansible is a configuration management tool
+-----------------------------------------------
+configure your laptop
+to make server ready for application deployment is called configuring server
+
+deploymennt
+-----------
+1.stop the server
+2.remove old code
+3.download the new code.
+4.restart
+
+ansible features
+-----------------
+.platform independent
+.scalable
+.idempotence
+.error handling
+.relatable and maintanable.
+.vault
+.rich modules
+.agentless
+
+Idempotence
+-----------
+if you run a program multiple time,that can create samething multiple
+times even you run your program infinite times,it should not create any
+damage.
+
+pull based configure
+---------------------
+chef server
+
+we will configure agents to check every one hour
+
+24*7=168 times it will connect to server
+bandwidth waste 
+resource consumption like CPU and Memory.
+
+PULL
+------
+1.nodes should connect to the servers through the software.
+2.nodes should downloaad the configuration periodically.say every 30 min.
+3.even there is no change in configuration,agents connect to the servers that creates unnecessary traffic and data.
+  consumption.
+PUSH
+-------
+1.unlike pull there is no need of agent installation.
+2.whenever there is a change in configuration,server can push to the node directly.
+3.ansible uses ssh authentication to connect to the servers.
+
+how to install ansible?
+sudo yum install ansible -y
+
+how to connect to node server using the main server?
+ansible all -i "54.163.222.183," -u centos --extra-vars "ansible_password=DevOps321" -m ping
+
+linux-->everything is called as command but in ansible everything is called as module.
+
+ansible is from RedHat and centos creators
+
+playbook--is a file of modules or collections
+playbook has YAML syntax-->yet markup language.
+
+ansible inventory is the list of host that the ansible server will connecct to.
+
+ansible-playbook -i inventory -e ansible_user=centos -e ansible_password=DevOps321 01-playbook.yaml
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
